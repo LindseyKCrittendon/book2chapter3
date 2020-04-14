@@ -106,9 +106,9 @@ printTaco("crunchy", "fish")
 
 // LIGHTNING EXERCISE 1
 // Copy and paste the following code block into your file
-let sentenceBeginning = "The symtoms of Covid-19 are"
-const symtoms = ["cough", "fever", "exhaustion", "loss of sense of smell", "difficulty breathing"]
-const mySymtoms = [];
+// let sentenceBeginning = "The symtoms of Covid-19 are"
+// const symtoms = ["cough", "fever", "exhaustion", "loss of sense of smell", "difficulty breathing"]
+// const mySymtoms = [];
 
 // This loop will go through each symtom, concatenate it to our sentence, and push it into a new array of our own personal symtoms
 for(let i = 0; i < symtoms.length; i++){
@@ -235,9 +235,53 @@ printOrderTotal(totalPriceForThisOrder)
 
 // You can start with this simpler version that outputs even numbers to the console and ignores odd numbers. You need to refactor this code to meet the requirements above.
 
-// for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
-//     // Divide the current number by 2, and check if the remainder is 0
-//     if (currentNumber % 2 === 0) {
-//         console.log(currentNumber) // Only 2, 4, 6 will appear
-//     }
-// }
+for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
+    // Divide the current number by 2, and check if the remainder is 0
+    if (currentNumber % 2 === 0) {
+        console.log(currentNumber) // Only 2, 4, 6 will appear
+    }
+}
+
+function printNumber(){
+    for(var i = 1; i < 100; i++){
+        // console.log(i);
+        let numberOne = i;
+        if(i % 5 === 0 && i % 7 === 0){
+            console.log("ChickenMonkey")
+        } else if(i % 7 === 0){
+            console.log("Monkey")
+        } 
+        else if(i % 5 === 0){
+            console.log("chicken")
+        }
+        else{
+            console.log(i)
+        }
+    }
+}
+printNumber()
+
+// Practice: Take a Number - Battle of the Bands
+// A local nightclub is having a Battle of the Bands night in a few months. They expect many bands to sign up because the grand prize is $20,000. To make things easier on the nightclub management, they want each band to be assigned a number so that they can easily keep track of the order in which the bands will perform.
+
+// Your job is to write a function that accepts any band name as an argument. The function will increment a global variable by one each time it is invoked, and return that number, and the band name concatenated together.
+
+ let bandNumber = 0
+
+ function takeNumber(bandName){
+     bandNumber.push = bandNumber ++;
+    //  return `${bandNumber}, ${bandName}`
+     console.log(`${bandNumber}, ${bandName}`);
+ } 
+ takeNumber("Third Eye blind")/*
+         Write your awesome code here. See comments
+         below for what should be returned.
+    */
+//    console.log(takeNumber("Third Eye Blind"))
+//     console.log(takeNumber("butthole surfers"))
+//  const scum = takeNumber("Galactic Scum")
+//  console.log(scum) 
+ // This should print "1. Galactic Scum" in the console
+
+//  const under = takeNumber("Underdogs")
+// console.log(under)  // This should print "2. Underdogs" in the console
