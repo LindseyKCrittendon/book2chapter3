@@ -71,12 +71,47 @@ printTaco("crunchy", "fish")
 
 // Write a function that accepts two parameters, first and last name. The function should return a greeting to that person using their full name. Then log the greeting to the console outside the function
 
-function greeting(firstName, lastName){
-    return `Howdy ${firstName} ${lastName}`
+// function greeting(firstName, lastName){
+//     return `Howdy ${firstName} ${lastName}`
    
-}
-console.log(greeting("lindsey", "clagg"))
+// }
+// console.log(greeting("lindsey", "clagg"))
 
+// function displayGreeting(firstName, lastName){
+//     console.log(`Hey, ${firstName}${lastName}`)
+// }
+// displayGreeting("Lindsey", "Clagg")
+
+function calculateOrderTotal(orderArray){
+    let sum = 0;
+
+    for (let i = 0; i < orderArray.length; i++){
+        sum += orderArray[i].price
+        console.log(orderArray[i].price)
+        console.log(sum)
+
+    }
+    return sum;
+}
+function printOrderTotal(orderTotal){
+    document.querySelector("#order-total").innerHTML = orderTotal;
+}
+
+const currentOrder = [
+    {
+        name: "Latte",
+        size: "M",
+        price: 3.99
+    },
+    {
+        name: "Americano",
+        size: "S",
+        price: 2.99
+    }
+]
+const totalPriceForThisOrder = calculateOrderTotal(currentOrder);
+console.log(totalPriceForThisOrder)
+printOrderTotal(totalPriceForThisOrder)
 // Practice: ChickenMonkey
 // Write a program that prints the numbers from 1 to 100. But for multiples of five (5, 10, 15, etc.) print "Chicken" instead of the number and for the multiples of seven (7, 14, 21, etc.) print "Monkey". For numbers which are multiples of both five and seven print "ChickenMonkey".
 
