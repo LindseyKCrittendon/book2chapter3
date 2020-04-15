@@ -241,7 +241,7 @@ for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
         console.log(currentNumber) // Only 2, 4, 6 will appear
     }
 }
-
+// classic interview problem, because this can be done with a function or for loop.  Usually called fizz buzz.
 function printNumber(){
     for(var i = 1; i < 100; i++){
         // console.log(i);
@@ -273,7 +273,14 @@ printNumber()
     //  return `${bandNumber}, ${bandName}`
      console.log(`${bandNumber}, ${bandName}`);
  } 
- takeNumber("Third Eye blind")/*
+
+ //can just const takeNumber = function (bandname){
+//      return bandnumber + 1 + " " + bandName
+//  }
+//then run const scum = takeNumber("Galactic Scum") and so on
+ takeNumber("Third Eye blind")
+ takeNumber("Underdogs")
+ takeNumber("Galactic Scum")/*
          Write your awesome code here. See comments
          below for what should be returned.
     */
@@ -333,3 +340,109 @@ function grill (currentObject) {
     cookedFood.push(currentObject);
 };
 // Your task is to iterate over the array of foods and invoke the function for each item so that the cookedFood array contains all of the items after they are cooked.
+
+for(let i = 0; i < foods.length; i++){
+    //run each food through the grill function.
+    grill(foods[i])
+}
+console.log(cookedFood)
+
+
+
+
+// function lovingJavaScript(){
+//     console.log("I fucking hate you, JS")
+// }
+// lovingJavaScript()
+
+// Practice: Overly Excited
+// For this exercise, you need to create a single JavaScript function named addExcitement that will use console.log() to print out a sentence to the browser console.
+
+// If you haven't done so yet, create the workspace/javascript/overly-excited directory structure in your home directory. Open your terminal and enter in the following command.
+
+// mkdir -p ~/workspace/javascript/overly-excited
+// Now that you have created the directory, you want to change to that directory so that you can add files to it.
+
+// cd ~/workspace/javascript/overly-excited
+// Create an index.html file in this directory with the touch command.
+
+// Create an overly-excited.js file in this directory with the touch command.
+
+// Copy the following code and paste it into the index.html file. Notice that the overly-excited.js file is properly linked so that when you load this HTML file in a web browser, the logic in that file will be executed.
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Overly Excited</title>
+// </head>
+// <body>
+
+//     <script src="overly-excited.js"></script>
+// </body>
+// </html>
+// Open the index.html file in your web browser.
+
+// At this point, you will simply see a blank web page because you have no content in the HTML file. Open your developer tools using the Option+Command+I keyboard shortcut.
+
+// At the top of the developer tools panel, you will see the word Console. Click on that word. The console.log() statement will output any message into this panel in your developer tools. You can try it out immediately by clicking in the Console panel, and typing console.log("Hello, world!"), and then pressing your return key.
+
+// Practice: Stacking Words
+// The learning objects of this exercise is to use iteration and string concatenation
+
+// Create an addExcitement function that should console.log() rows of words. It should take an array containing the words of a sentence and output them in the developer console.
+
+// Example output:
+
+// The
+
+// The walrus
+
+// The walrus danced
+
+// The walrus danced through
+
+// The walrus danced through the
+
+// The walrus danced through the trees
+
+// The walrus danced through the trees in
+
+// The walrus danced through the trees in the
+
+// The walrus danced through the trees in the light
+
+// The walrus danced through the trees in the light of
+
+// The walrus danced through the trees in the light of the
+
+// The walrus danced through the trees in the light of the moon ...
+
+// Paste the following code into overly-excited.js
+
+// // Create an array that contains the words in the sentence
+let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+
+// /*
+//     The addExcitement function should be an impure function, and accept
+//     the array as the sole argument. It should iterate over the array
+//     and output the words to the browser console.
+// */
+function addExcitement (theWordArray) {
+
+//     // Each time the for loop executes, you're going to add one more word to this string
+    let buildMeUp = ""
+
+    for (let i = 0; i < theWordArray.length; i++) {
+        buildMeUp += `${theWordArray[i]} `
+        console.log(buildMeUp)
+    }
+}
+//         // Concatenate the new word onto buildMeUp
+
+//         // Print buildMeUp to the console
+//     }
+
+// }
+
+// // Invoke the function and pass in the array
+// addExcitement(sentence)
